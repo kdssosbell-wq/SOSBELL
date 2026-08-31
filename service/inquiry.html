@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>온라인문의 - 더포스</title>
+<meta name="description" content="더포스 - 음성으로 작동하는 비상벨 시스템 개발·제조·설치">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!-- ================= 헤더 (메뉴 수정은 이 영역) ================= -->
+<header class="header">
+  <div class="inner">
+    <a class="logo" href="../index.html"><img src="../images/logo-white.png" alt="더포스"></a>
+    <button class="menu-btn" aria-label="메뉴"><i></i><i></i><i></i></button>
+    <ul class="gnb">
+      <li><a href="../company/overview.html">COMPANY</a>
+        <ul class="sub">
+          <li><a href="../company/overview.html">회사개요</a></li>
+          <li><a href="../company/philosophy.html">경영이념</a></li>
+          <li><a href="../company/proposal.html">제안배경</a></li>
+          <li><a href="../company/ci.html">CI소개</a></li>
+          <li><a href="../company/organization.html">조직도</a></li>
+          <li><a href="../company/certification.html">인증서</a></li>
+          <li><a href="../company/waytocome.html">오시는길</a></li>
+        </ul>
+      </li>
+      <li><a href="../product/bell.html">PRODUCTS</a>
+        <ul class="sub">
+          <li class="has-sub"><a href="../product/bell.html">비상벨 시스템 <span class="arr">&rsaquo;</span></a>
+            <ul class="sub2">
+              <li><a href="../product/tfess-300.html">TFESS-300</a></li>
+              <li><a href="../product/tfess-301.html">TFESS-301</a></li>
+            </ul>
+          </li>
+          <li class="has-sub"><a href="../product/detector.html">불법촬영탐지 시스템 <span class="arr">&rsaquo;</span></a>
+            <ul class="sub2">
+              <li><a href="../product/detector.html">불법촬영탐지기</a></li>
+            </ul>
+          </li>
+          <li class="has-sub"><a href="../maintenance/solution.html">유지관리 시스템 <span class="arr">&rsaquo;</span></a>
+            <ul class="sub2">
+              <li><a href="../maintenance/solution.html">비상벨 유지관리 솔루션</a></li>
+              <li><a href="../maintenance/bell-maintenance.html">유지관리 기능</a></li>
+              <li><a href="../maintenance/24hours.html">24시간 관리 센터</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="../reference/reference.html">REFERENCE</a>
+        <ul class="sub">
+          <li><a href="../reference/reference.html">설치사례</a></li>
+          <li><a href="../reference/partners.html">고객사리스트</a></li>
+        </ul>
+      </li>
+      <li><a href="../service/media.html">ABOUT</a>
+        <ul class="sub">
+          <li><a href="../service/media.html">보도자료</a></li>
+          <li><a href="../service/inquiry.html">온라인문의</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="tel"><span>&#9990;</span> 031-372-9438</div>
+  </div>
+</header>
+
+<!-- 페이지 타이틀 -->
+<div class="page-title">
+  <h2>온라인문의</h2>
+  <div class="sub-en en">INQUIRY</div>
+  <div class="breadcrumb"><a href="../index.html">홈</a> <span>&rsaquo;</span> SERVICE <span>&rsaquo;</span> 온라인문의</div>
+</div>
+
+<section class="section">
+  <div class="container content-narrow">
+    <div class="privacy-box">
+      <h4>개인정보 수집·이용·제공 동의서</h4>
+      더포스는 귀하의 개인정보를 중요하게 생각하며 개인정보 보호법에 따라 안전하게 처리하고 있습니다.
+      회사는 이하와 같이 귀하의 개인정보를 수집·이용·제공하고자 하오니 아래의 사항을 잘 읽어보시고 동의하시는 경우 서명하여 주시기 바랍니다.<br><br>
+      수집 항목: 업체명, 담당자명, 연락처, 이메일주소 등 귀하가 제공한 내용에 포함되어 있는 일체의 개인정보<br>
+      수집 및 이용 목적: 상담문의 답변<br>
+      보유 및 이용기간: 관계 법령의 규정에 따라 개인정보를 보존할 의무가 있는 경우가 아닌한,
+      수집된 개인정보는 컨퍼런스 종료일로부터 3년 동안 보유·이용됩니다.<br>
+      귀하는 위와 같은 일반 개인정보의 수집 및 이용에 대한 동의를 거부할 수 있으나, 동의를 거부하는 경우 상담문의가 불가합니다.
+    </div>
+    <p class="agree-line"><label><input type="checkbox" id="agree"> 개인정보처리방침에 동의합니다. (필수)</label></p>
+
+    <!-- 문의 폼 : action을 실제 접수 시스템 주소로 바꾸거나, 아래 mailto 방식을 사용하세요 -->
+    <form class="form-grid" onsubmit="return sendInquiry(this)">
+      <div><label for="f-company">업체명 <em>*</em></label><input id="f-company" name="업체명" required></div>
+      <div><label for="f-name">담당자명 <em>*</em></label><input id="f-name" name="담당자명" required></div>
+      <div><label for="f-tel">연락처 <em>*</em></label><input id="f-tel" name="연락처" required></div>
+      <div><label for="f-email">이메일 주소 <em>*</em></label><input id="f-email" name="이메일" type="email" required></div>
+      <div class="full"><label for="f-msg">문의내용</label><textarea id="f-msg" name="문의내용" rows="7"></textarea></div>
+      <div class="full form-submit"><button type="submit">상담문의하기</button></div>
+    </form>
+    <script>
+    function sendInquiry(f){
+      if(!document.getElementById('agree').checked){alert('개인정보처리방침에 동의해 주세요.');return false;}
+      var body='업체명: '+f['업체명'].value+'%0D%0A담당자명: '+f['담당자명'].value+'%0D%0A연락처: '+f['연락처'].value+'%0D%0A이메일: '+f['이메일'].value+'%0D%0A%0D%0A문의내용:%0D%0A'+encodeURIComponent(f['문의내용'].value);
+      location.href='mailto:kdssosbell@gmail.com?subject='+encodeURIComponent('[온라인문의] '+f['업체명'].value)+'&body='+body;
+      return false;
+    }
+    </script>
+  </div>
+</section>
+
+<!-- 우측 퀵메뉴 -->
+<div class="quick">
+  <a href="https://shop.g2b.go.kr//link/GMSF001_01/?ctrtItemMngNo=002370272_1010000001" target="_blank"><img src="../images/banner-nara.png" alt="나라장터"></a>
+  <a href="https://digitalmall.g2b.go.kr/link/GDSF001_01/?ctrtItemMngNo=002262271_1030000001" target="_blank"><img src="../images/banner-jodal.png" alt="디지털서비스몰"></a>
+  <a href="../product/tfess-300.html"><img src="../images/tfes300-small.png" alt="TFESS-300"></a>
+  <a href="../product/tfess-301.html"><img src="../images/tfess301-small.png" alt="TFESS-301"></a>
+</div>
+<button class="top-btn" aria-label="맨 위로">&#8679;</button>
+
+<!-- ================= 푸터 (회사정보 수정은 이 영역) ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="top">
+      <div class="brand">
+        <img class="logo" src="../images/logo-white.png" alt="더포스">
+        <div class="sns">
+          <a href="https://www.instagram.com/sosbell.co.kr/" target="_blank"><img src="../images/sns-instagram-white.png" alt="인스타그램"></a>
+          <a href="https://blog.naver.com/thefourth9242" target="_blank"><img src="../images/sns-blog-white.png" alt="네이버블로그"></a>
+          <a href="https://www.youtube.com/@TheFourthcoLtd" target="_blank"><img src="../images/sns-youtube-white.png" alt="유튜브"></a>
+        </div>
+        <div class="info">
+          <h4>(주)더포스</h4>
+          대표이사 이건무 l 사업자등록번호 283-88-00578<br>
+          주소 : 경기도 화성시 동탄첨단산업1로 27<br>
+          (동탄 금강IX타워) A동 2419,2420,2421,2422호<br>
+          Tel 031-372-9438 l Fax 031-372-6953
+        </div>
+      </div>
+      <div class="col">
+        <h4>회사소개</h4>
+        <ul>
+          <li><a href="../company/overview.html">회사개요</a></li>
+          <li><a href="../company/philosophy.html">경영이념</a></li>
+          <li><a href="../company/proposal.html">제안배경</a></li>
+          <li><a href="../company/ci.html">CI소개</a></li>
+          <li><a href="../company/organization.html">조직도</a></li>
+          <li><a href="../company/certification.html">인증서</a></li>
+          <li><a href="../company/waytocome.html">오시는길</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>비상벨</h4>
+        <ul>
+          <li><a href="../product/bell.html">비상벨</a></li>
+          <li><a href="../product/components.html">비상벨 구성품</a></li>
+          <li><a href="../maintenance/bell-maintenance.html">유지관리</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>설치사례</h4>
+        <ul>
+          <li><a href="../reference/reference.html">설치사례</a></li>
+          <li><a href="../reference/partners.html">고객사리스트</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>고객지원</h4>
+        <ul>
+          <li><a href="../service/media.html">보도자료</a></li>
+          <li><a href="../service/inquiry.html">온라인문의</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copy">Copyright&copy; 2026 (주)더포스. All Rights Reserved.</div>
+</footer>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
